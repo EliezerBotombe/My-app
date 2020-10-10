@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id="demo">Javascript can change HTML contenct</p>
+    <button onclick="document.getElementById('demo').innerHTML = 'Eliezer Botombe'">change</button>
+    <hr>
+
+    <h2>Javascript can change HTML attribute avlues and images</h2>
+    <button onclick="document.getElementById('Image').src='pic_bulboff.gif'">Lights off</button>
+    <img id="Image" src="pic_bulboff.gif" styele="width: 100px" >
+    <button onclick="document.getElementById('Image').src='pic_bulbon.gif'" >Lights on</button>
+    <hr>
+
+    <h2>Javascript can change the style of an Element or hide an element</h2>
+    <p id="c">javascript can change the style of an HTML element</p>
+    <button onclick="document.getElementById('c').style.fontSize = '36px'">click me!!</button>
+    <button onclick="document.getElementById('c').style.fontSize = '18px' ">revert back</button>
+    <button onclick="document.getElementById('c').style.display = 'none'" >Hide It</button>
+    
+    <h1>JavaScript Display Possibilities</h1>
+     <p>   JavaScript can "display" data in different ways: ,<br>
+        Writing into an HTML element, using innerHTML. <br>
+        Writing into the HTML output using document.write(). <br>
+        Writing into an alert box, using window.alert(). <br>
+        Writing into the browser console, using console.log().
+
+     </p>
+     <hr>
+
+     <h2>Document.write() </h2>
+     <script>
+         document.write(2 + 6 );
+     </script>
+     <script>
+        document.write('elie');
+        //alert('hi');
+    </script>
+
+    <blockquote>
+        <h1>Keyword	Description</h1> <br>
+        break	:--->Terminates a switch or a loop <br>
+        continue :-->	Jumps out of a loop and starts at the top <br>
+        debugger :-->	Stops the execution of JavaScript, and calls (if available) the debugging function <br>
+        do ... while :-->	Executes a block of statements, and repeats the block, while a condition is true <br>
+        for	:--> Marks a block of statements to be executed, as long as a condition is true <br>
+        function :-->	Declares a function <br>
+        if ... else:-->	Marks a block of statements to be executed, depending on a condition <br>
+        return	:-->Exits a function <br>
+        switch:-->	Marks a block of statements to be executed, depending on different cases <br>
+        try ... catch :-->	Implements error handling to a block of statements <br>
+        var	:-->Declares a variable
+    </blockquote>
+<hr>
+    <h1>Javascript Variables</h1>
+    
+    <p id="demo2" style="color:red"></p>
+    <script>
+        var x = 5;
+        var y = 6;
+        var z = x + y;
+        document.getElementById("demo2").innerHTML = "The value of Z is" +  " " + z;
+        console.log(z);
+    </script>
+    <p>
+        var x = 5; <br>
+        var y = 6; <br>
+        var z = x + y; <br>
+        document.getElementById("demo").innerHTML = "The value of Z is" + z; <br>
+    </p>
+<hr>
+<h1>Using let and const (2015)</h1>
+Before 2015, using the var keyword was the only way to declare a JavaScript variable. <br>
+
+The 2015 version of JavaScript (ES6 - ECMAScript 2015) allows the use of the <h3 style="color: red">const</h3> keyword to define a variable that cannot be reassigned,  <h3 style="color: blue">let</h3> keyword to define a variable with restricted scope. <br>
+
+Because it is a little complicated to describe the difference between these keywords, and because they are not supported in older browsers, the first part of this tutorial will most often use var. <br>
+<hr>
+<h1>JavaScript Data Types</h1>
+JavaScript variables can hold numbers like 100 and text values like "John Doe".
+
+In programming,
+<h3 style="color: red">1.Strings</h3> 
+text values are called text strings. ('name');
+
+<h3 style="color: red">2.Numbers</h3>
+variable contain numbers too
+<h3 style="color: red">3.boolean</h3>
+this is when variable contain a <b style="color: green">true</b> or <b style="color: blue">false</b> value
+<h3 style="color: red">4.Undefined</h3>
+when a varibale is not defined or specified
+<h3 style="color: red">5.Null</h3>
+NULL is a special variable of type Undefined. Unlike a variable that is truly undefined, the value ! NULL can be assigned to other variables and used in comparisons.
+
+Strings are written inside double or single quotes. Numbers are written without quotes.
+
+If you put a number in quotes, it will be treated as a text string.
+<hr>
+<p><b>JavaScript Dollar Sign $</b> <br>
+    Remember that JavaScript identifiers (names) must begin with: <br>
+    
+    A letter (A-Z or a-z) <br>
+    A dollar sign ($) <br>
+    Or an underscore (_) <br>
+    Since JavaScript treats a dollar sign as a letter, identifiers containing $ are valid variable names: <br>
+
+    <b> JavaScript Underscore (_)</b>
+Since JavaScript treats underscore as a letter, identifiers containing _ are valid variable names:
+
+</p>
+<br>
+<hr>
+<p> <h1>JavaScript Arithmetic Operators</h1>
+    Arithmetic operators are used to perform arithmetic on numbers: <br>
+    
+    Operator	Description <br>
+    <p style="color: rgb(243, 36, 17)">
+    +	Addition  <br>
+    -	Subtraction  <br>
+    *	Multiplication  <br>
+    **	Exponentiation (ES2016)  <br>
+    /	Division  <br>
+    %	Modulus (Division Remainder) <br>
+    ++	Increment  <br>
+    --	Decrement
+    </p>
+</p>
+<hr>
+ <p>
+   <b> JavaScript Assignment Operators</b>
+    Assignment operators assign values to JavaScript variables.
+    
+    Operator	Example	Same As
+    <p style="color: blue">
+    operator......,example........., same as <br>
+    =	 ........,x = y  ........,x = y <br>
+    +=	 ........,x += y ........,x = x + y <br>
+    -=	 ........,x -= y ........,x = x - y <br>
+    *= ........,x *= y ........,x = x * y <br>
+    /=	 ........,x /= y ........,x = x / y <br>
+    %= ........,x %= y ........,x = x % y <br>
+    **=	 ........,x **= y ........,x = x ** y <br>
+    The addition assignment operator (+=) adds a value to a variable.
+    </p>
+ </p>
+<h2>Javascript string operators</h2>
+<p>
+    p id="names" p <br>
+var txt1 = "elie"; <br>
+var txt2 = "Botombe"; <br>
+var txt3 = txt1 + " " + txt2; <br>
+document.getElementById("names").innerHTML = txt3; <br>
+console.log(txt3);  
+
+</p>
+<p id="names"></p>
+<Script>
+var txt1 = "elie";
+var txt2 = "Botombe";
+var txt3 = txt1 + " " + txt2;
+document.getElementById("names").innerHTML = txt3;
+console.log(txt3);  
+</Script>
+
+<p>
+    <h1>Adding Strings and Numbers</h1>
+       <h2> Adding two numbers, will return the sum, but adding a number and a string will return a string:</h2>
+      
+
+     
+       var x = 5 + 5;  <br>
+       var y = "5" + 5;  <br>
+       var z = "Hello" + 5; <br>
+       document.getElementById("demo").innerHTML =
+       x + "<br>" + y + "<br>" + z;
+</p>
+<p id="demo3"></p>
+<script>
+    var x = 5 + 5;
+    var y = "5" + 5;
+    var c = "hello" + 5;
+    document.getElementById("demo3").innerHTML = x + " <br>" + y + "<br>" + c;
+</script>
+    <p><h1>JavaScript Comparison Operators</h1>
+        Operator.........................Description <br>
+        == ......................... 	equal to <br>
+        ===	 .........................equal value and equal type <br>
+        != .........................	not equal <br>
+        !== .........................	not equal value or not equal type <br>
+        <= .........................	less than or equal to    <br> 
+        > .........................	greater than <br>
+        < .........................	less than <br>
+        >= .........................	greater than or equal to <br>    
+        ? .........................	ternary operator
+    </p>
+<hr>
+
+
+     <h1>js arithmethic next</h1>
+     <h2 style="color: red">Operators and operand</h2>
+     <h3>1.Operands</h3>
+     <p>The Numbers in an arithmetic operation are called operands</p>
+
+     <h3>2.Operator</h3>
+     <p>The operation to be performed between the two operands is defined by an operator</p>
+     <p>+,-,*,/</p>
+
+     <h4>examples</h4>
+     <h5>Addition</h5>
+     
+     <P><h3>Method 1</h3>
+        <p id="add" ></p>
+        var x = 6; <br>
+        var y = 8;  <br>
+        var e = 22;  <br>
+        var d = x + y + e;  <br>
+        document.getElementById("add").innerHTML = d;
+</P>
+    
+    <p><h3>Method 2</h3> 
+        <p id="adding"></p>
+        var name = "elie"; <br>
+        var lastName = "bT"; <br>
+        var a = 20; <br>
+        document.getElementById("add+").innerHTML = name + " " + lastName + " is " + a;
+    </p>
+     <script>
+         var x = 6;
+         var y = 8;
+         var e = 22;
+         var d = x + y + e;
+         document.getElementById("add").innerHTML = d;
+
+         var name = "elie";
+         var lastName = "bT";
+         var a = 20;
+         document.getElementById("adding").innerHTML = name + " " + lastName + " is " + a;
+
+
+     </script>
+
+     <h1 style="color: red">Remainder
+        The modulus operator (%) returns the division remainder.</h1>
+        <p id="remain"></p>
+        <p>
+            var x = 18; <br>
+            var y = 10;   <br>
+            var z = x % y;  <br>
+            document.getElementById("increment").innerHTML = z;
+
+        </p>
+        
+        <script>
+            var x = 18;
+            var y = 10;
+            var z = x % y;
+            document.getElementById("remain").innerHTML = z;
+        </script>
+
+    <hr>
+    <p>
+       <h2 style="color: blue"> Incrementing</h2>
+        The increment operator (++) increments numbers. <br>
+    <p id="inc"></p>
+        Example  <br>
+        var x = 5;  <br>
+        x++;      <br>
+        var z = x; <b></b>
+    <p id="dec"></p>
+        <h2 style="color: blue">Decrementing</h2>
+        The decrement operator (--) decrements numbers. <br>
+        Example   <br>
+        var x = 5;  <br>
+        x--;   <br>
+        var z = x;  <br>
+
+    </p>
+    <script>
+        var x = 10;
+        x++;
+        var y = x;
+        document.getElementById("inc").innerHTML = y;
+
+        var x = 20;
+        x--;
+        var d = x;
+        document.getElementById("dec").innerHTML = d
+    </script>
+
+<h1 style="color: blue">Exponentiation</h1>
+<p>
+The exponentiation operator (**) raises the first operand to the power of the second operand.   <br>
+
+Example  <br>
+<p id="exp" style="color: red"></p>
+var x = 5;    <br>
+var z = x ** 2;         <br> 
+document.getElementById("demo").innerHTML = z; <br>
+// result is 25 <br>
+
+<p id="pow" style="color: red"></p>
+x ** y produces the same result as Math.pow(x,y):  <br>
+var x = 5;    <b></b>
+var z = Math.pow(x,2);    <br>
+// result is 25   <br>
+
+</p>
+
+<script>
+var x = 5;
+var z = x ** 2;          // result is 25
+document.getElementById("exp").innerHTML = z;
+
+
+
+var x = 5;
+var z = Math.pow(x,2);   // result is 25
+document.getElementById("pow").innerHTML = z;
+</script>
+<hr>
+
+<p>
+    <h1>JavaScript Operator Precedence Values <br>
+        Pale red entries indicates ECMAScript 2015 (ES6) or higher.</h1>
+
+Value	Operator	Description	Example <br>
+20	( )	Expression grouping	(3 + 4)   <br>
+ 	 	 	 
+19	.	Member	person.name  <br>
+19	[]	Member	person["name"]  <br>
+19	()	Function call	myFunction() <br>
+19	new	Create	new Date()  <br>
+ 	 	 	 
+17	++	Postfix Increment	i++  <br>
+17	--	Postfix Decrement	i--  <br>
+ 	 	 	 
+16	++	Prefix Increment	++i  <br>
+16	--	Prefix Decrement	--i  <br>
+16	!	Logical not	!(x==y)  <br>
+16	typeof	Type	typeof   <br>
+ 	 	 	 
+15	**	Exponentiation (ES2016)	10 ** 2  <br>
+ 	 	 	 
+14	*	Multiplication	10 * 5  <br>
+14	/	Division	10 / 5   <br>
+14	%	Division Remainder	10 % 5   <br>
+ 	 	 	 
+13	+	Addition	10 + 5  <br>
+13	-	Subtraction	10 - 5   <br>
+ 	 	 	 
+12	<<	Shift left	x << 2  <br>
+12	>>	Shift right	x >> 2   <br>
+12	>>>	Shift right (unsigned)	x >>> 2   <br>
+ 	 	 	 
+11	<	Less than	x < y   <br>
+11	<=	Less than or equal	x <= y  <br>
+11	>	Greater than	x > y  <br>
+11	>=	Greater than or equal	x >= y   <br>
+11	in	Property in Object	"PI" in Math <br>
+11	instanceof	Instance of Object	instanceof Array <br>
+ 	 	 	 
+10	==	Equal	x == y <br>
+10	===	Strict equal	x === y  <br>
+10	!=	Unequal	x != y  <br>
+10	!==	Strict unequal	x !== y  <br>
+ 	 	 	 
+9	&	Bitwise AND	x & y <br>
+8	^	Bitwise XOR	x ^ y <br>
+7	|	Bitwise OR	x | y <br>
+6	&&	Logical AND	x && y<br>
+5	||	Logical OR	x || y<br>
+4	? :	Condition	? "Yes" : "No" <br>
+ 	 	 	 
+3	+=	Assignment	x += y  <br>
+3	/=	Assignment	x /= y  <br>
+3	-=	Assignment	x -= y <br>
+3	*=	Assignment	x *= y <br>
+3	%=	Assignment	x %= y <br>
+3	<<=	Assignment	x <<= y <br>
+3	>>=	Assignment	x >>= y <br>
+3	>>>=	Assignment	x >>>= y  <br>
+3	&=	Assignment	x &= y <br>
+3	^=	Assignment	x ^= y <br>
+3	|=	Assignment	x |= y  <br>
+ 	 	 	 
+2	yield	Pause Function	yield x  <br>
+1	,	Comma	5 , 6       <br>
+</p>
+
+<p>
+    <h2>JavaScript Data Types</h2>
+JavaScript Data Types <br>
+JavaScript variables can hold many data types: numbers, strings, objects ,boolean and underfined:
+
+var length = 16;                               // Number   <br>
+var lastName = "Johnson";                      // String   <br>
+var x = {firstName:"John", lastName:"Doe"};    // Object   <br>
+var y = true;                                  // Boolean  <br>
+var city;                                      // Underfined    <br>
+</p>
+
+<p>
+    <h2>JavaScript Types are Dynamic</h2>
+JavaScript has dynamic types. This means that the same variable can be used to hold different data types: <br>
+
+Example <br>
+var x;           // Now x is undefined <br>
+x = 5;           // Now x is a Number <br>
+x = "John";      // Now x is a String <br>
+<h2 style="color:red">JavaScript Strings </h2> <br>
+A string (or a text string) is a series of characters like "John Doe".  <br>
+
+Strings are written with quotes. You can use single or double quotes:  
+Example <br>
+var carName1 = "Volvo XC60";   // Using double quotes  <br>
+var carName2 = 'Volvo XC60';   // Using single quotes  <br>
+You can use quotes inside a string, as long as they don't match the quotes surrounding the string:  <br>
+Example  <br>
+var answer1 = "It's alright";             // Single quote inside double quotes <br>
+var answer2 = "He is called 'Johnny'";    // Single quotes inside double quotes <br>
+var answer3 = 'He is called "Johnny"';    // Double quotes inside single quotes <br>
+You will learn more about strings later in this tutorial.  <br> <br> <br>
+
+<h2 style="color: red">JavaScript Numbers </h2><br>
+JavaScript has only one type of numbers.  <br>
+Numbers can be written with, or without decimals:  <br>
+Example  <br>
+var x1 = 34.00;     // Written with decimals  <br>
+var x2 = 34;        // Written without decimals  <br>
+Extra large or extra small numbers can be written with scientific (exponential) notation:  <br>
+Example  <br>
+<p id="num"></p>
+var y = 123e5;      // 12300000  <br>
+var z = 123e-5;     // 0.00123  <br>
+You will learn more about numbers later in this tutorial.  <br>
+<script>
+    var y = 123e5;
+    var z = 124e-5;
+    document.getElementById("num").innerHTML = y + "<br>" + z;
+</script>
+
+,<br>
+
+<h3 style="color: red">JavaScript Booleans</h3>  <br>
+Booleans can only have two values: true or false.  <br>
+Example  <br>
+<p id="boolean"></p>
+var x = 5;  <br>
+var y = 5;  <br>
+var z = 6;  <br>
+(x == y)       // Returns true  <br>
+(x == z)       // Returns false  <br>
+document.getElementById("demo").innerHTML = (x == y) + (x == z);
+
+</p>
+<Script>
+    var x = 5;
+    var z = 6;
+    var y = 5;
+    document.getElementById("boolean").innerHTML = (x == z ) + "<br>" + (x == y);
+</Script>
+
+<p>
+ <h2 style="color: red">   JavaScript Arrays</h2>
+JavaScript arrays are written with square brackets. <br>
+
+Array items are separated by commas.  <br>
+The following code declares (creates) an array called cars, containing three items (car names): <br>
+Example    <br>
+var cars = ["Saab", "Volvo", "BMW"];  <br>
+Array indexes are zero-based, which means the first item is [0], second is [1], and so on.  <br>
+
+You will learn more about arrays later in this tutorial.  <br>
+
+JavaScript Objects   <br>
+JavaScript objects are written with curly braces {}.  <br>
+
+Object properties are written as name:value pairs, separated by commas.  <br>
+
+Example  <br>
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}; <br>
+The object (person) in the example above has 4 properties: firstName, lastName, age, and eyeColor. <br>
+
+You will learn more about objects later in this tutorial. <br>
+
+The typeof Operator  <br>
+You can use the JavaScript typeof operator to find the type of a JavaScript variable. <br>
+
+The typeof operator returns the type of a variable or an expression:  <br>
+
+Example   <br>
+typeof ""             // Returns "string" <br>
+typeof "John"         // Returns "string" <br>
+typeof "John Doe"     // Returns "string"  <br>
+Example   <br>
+typeof 0              // Returns "number"  <br>
+typeof 314            // Returns "number"   <br>
+typeof 3.14           // Returns "number" <br>
+typeof (3)            // Returns "number" <br>
+typeof (3 + 4)        // Returns "number" <br>
+Undefined  <br>
+In JavaScript, a variable without a value, has the value undefined. The type is also undefined. <br>
+
+Example  <br>
+var car;    // Value is undefined, type is undefined <br>
+Any variable can be emptied, by setting the value to undefined. The type will also be undefined. <br>
+
+Example  <br>
+car = undefined;    // Value is undefined, type is undefined <br>
+Empty Values <br>
+An empty value has nothing to do with undefined. <br>
+
+An empty string has both a legal value and a type. <br>
+
+Example <br>
+var car = "";    // The value is "", the typeof is "string" <br>
+Null <br>
+In JavaScript null is "nothing". It is supposed to be something that doesn't exist. <br>
+
+Unfortunately, in JavaScript, the data type of null is an object. <br>
+
+You can consider it a bug in JavaScript that typeof null is an object. It should be null. <br>
+
+You can empty an object by setting it to null: <br>
+
+Example <br>
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}; <br>
+person = null;    // Now value is null, but type is still an object <br>
+You can also empty an object by setting it to undefined: <br>
+
+Example <br>
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}; <br>
+person = undefined;   // Now both value and type is undefined <br>
+Difference Between Undefined and Null <br>
+undefined and null are equal in value but different in type: <br>
+
+typeof undefined           // undefined <br>
+typeof null                // object <br>
+ 
+null === undefined         // false <br>
+null == undefined          // true <br>
+Primitive Data <br>
+A primitive data value is a single simple data value with no additional properties and methods. <br>
+
+The typeof operator can return one of these primitive types: <br>
+
+string <br>
+number <br>
+boolean <br>
+undefined <br>
+Example <br>
+typeof "John"              // Returns "string" <br>
+typeof 3.14                // Returns "number" <br>
+typeof true                // Returns "boolean" <br>
+typeof false               // Returns "boolean" <br>
+typeof x                   // Returns "undefined" (if x has no value) <br>
+Complex Data  <br>
+The typeof operator can return one of two complex types: <br>
+
+function <br>
+object <br>
+The typeof operator returns "object" for objects, arrays, and null. <br>
+
+The typeof operator does not return "object" for functions.  <br>
+
+Example <br>
+typeof {name:'John', age:34} // Returns "object"  <br>
+typeof [1,2,3,4]             // Returns "object" (not "array", see note below) <br>
+typeof null                  // Returns "object"  <br>
+typeof function myFunc(){}   // Returns "function"   <br>
+
+</p>
+<bLOCKquote>
+    <H1 style="color:red"></H1>
+    A JavaScript function is a block of code designed to perform a particular task. <br>
+    
+    A JavaScript function is executed when "something" invokes it (calls it). <br>
+    
+    Example <br>
+    function myFunction(p1, p2) { <br>
+      return p1 * p2;   // The function returns the product of p1 and p2 <br>
+    } <br>
+    <h2 style="color: red">JavaScript Function Syntax </h2> <br>
+    A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().  <br>
+    
+    Function names can contain letters, digits, underscores, and dollar signs (same rules as variables). <br>
+    
+    The parentheses may include parameter names separated by commas:  <br>
+    (parameter1, parameter2, ...) <br>
+    
+    The code to be executed, by the function, is placed inside curly brackets: {}  <br>
+    
+    function name(parameter1, parameter2, parameter3) {   <br>
+      // code to be executed<br>
+    }  <br>
+    Function parameters are listed inside the parentheses () in the function definition.  <br>
+    
+    Function arguments are the values received by the function when it is invoked. <br>
+    
+    Inside the function, the arguments (the parameters) behave as local variables. <br>
+    
+    A Function is much the same as a Procedure or a Subroutine, in other programming languages. <br>
+    
+   <h2 style="color: red"> Function Invocation</h2>  <br>
+    The code inside the function will execute when "something" invokes (calls) the function:  <br>
+     
+    When an event occurs (when a user clicks a button)  <br>
+    When it is invoked (called) from JavaScript code  <br>
+    Automatically (self invoked)  <br>
+    You will learn a lot more about function invocation later in this tutorial.  <br>
+    
+    
+  <h2 style="color: red">  Function Return </h2> <br>
+    When JavaScript reaches a return statement, the function will stop executing.  <br>
+    
+    If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.  <br>
+    
+    Functions often compute a return value. The return value is "returned" back to the "caller":  <br>
+    
+    Example  <br>
+    Calculate the product of two numbers, and return the result:  <br>
+    
+    var x = myFunction(4, 3);   // Function is called, return value will end up in x  <br>
+    
+    function myFunction(a, b) {  <br>
+      return a * b;             // Function returns the product of a and b  <br>
+    } <br>
+    The result in x will be:  <br>
+    
+    12 <br>
+  <h3 style="color: red">    Why Functions?</h3> <br>
+    You can reuse code: Define the code once, and use it many times. <br>
+    
+    You can use the same code many times with different arguments, to produce different results. <br>
+    
+    Example <br>
+    Convert Fahrenheit to Celsius: <br>
+    
+    function toCelsius(fahrenheit) { <br>
+      return (5/9) * (fahrenheit-32); <br>
+    } <br>
+    document.getElementById("demo").innerHTML = toCelsius(77); <br>
+    The () Operator Invokes the Function <br>
+    Using the example above, toCelsius refers to the function object, and toCelsius() refers to the function result. <br>
+    
+   <h3 style="color: red"> Accessing a function without () will return the function object instead of the function result. </h3><br>
+    
+    Example <br>
+    function toCelsius(fahrenheit) { <br>
+      return (5/9) * (fahrenheit-32); <br>
+    } <br>
+    document.getElementById("demo").innerHTML = toCelsius; <br>
+    Functions Used as Variable Values <br>
+    Functions can be used the same way as you use variables, in all types of formulas, assignments, and calculations. <br>
+    
+    Example <br>
+    Instead of using a variable to store the return value of a function: <br>
+    
+    var x = toCelsius(77); <br>
+    var text = "The temperature is " + x + " Celsius"; <br>
+    You can use the function directly, as a variable value: <br>
+    
+    var text = "The temperature is " + toCelsius(77) + " Celsius"; <br>
+    You will learn a lot more about functions later in this tutorial. <br>
+    
+    <h3 style="color: red;">Local Variables</h3> <br>
+    Variables declared within a JavaScript function, become LOCAL to the function. <br>
+    
+    Local variables can only be accessed from within the function. <br>
+    
+    Example <br>
+    // code here can NOT use carName <br>
+    
+    function myFunction() { <br>
+      var carName = "Volvo"; <br>
+      // code here CAN use carName <br>
+    }<br>
+    
+    // code here can NOT use carName <br>
+    </bLOCKquote>
+    <div>
+        <h1 style="color: red">JavaScript Strings</h1>  <br>
+JavaScript strings are used for storing and manipulating text.  <br>
+
+JavaScript Strings  <br>
+A JavaScript string is zero or more characters written inside quotes.  <br>
+
+Example  <br>
+var x = "John Doe";  <br>
+You can use single or double quotes:  <br> 
+
+Example  <br>
+var carName1 = "Volvo XC60";  // Double quotes  <br>
+var carName2 = 'Volvo XC60';  // Single quotes  <br>
+You can use quotes inside a string, as long as they don't match the quotes surrounding the string:  <br>
+
+Example  <br>
+var answer1 = "It's alright";  <br>
+var answer2 = "He is called 'Johnny'"; <br>
+var answer3 = 'He is called "Johnny"'; <br>
+
+
+<h1 style="color: blue">String Length</h1>
+To find the length of a string, use the built-in length property: <br>
+
+Example <br>
+<p id="abc"></p> <br>
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br>
+var sln = txt.length; <br>
+    </div>
+<script>
+    var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var sln = txt.length;
+    document.getElementById('abc').innerHTML = sln;
+</script>
+
+<div>
+Escape Character <br>
+Because strings must be written within quotes, JavaScript will misunderstand this string: <br>
+
+var x = "We are the so-called "Vikings" from the north."; <br>
+The string will be chopped to "We are the so-called ". <br>
+
+The solution to avoid this problem, is to use the backslash escape character. <br>
+
+The backslash (\) escape character turns special characters into string characters:<br>
+
+Code	Result	Description <br>
+\'	'	Single quote <br>
+\"	"	Double quote<br>
+\\	\	Backslash <br>
+The sequence \"  inserts a double quote in a string: <br>
+
+Example <br>
+var x = "We are the so-called \"Vikings\" from the north."; <br>
+The sequence \'  inserts a single quote in a string: <br>
+
+Example <br>
+var x = 'It\'s alright.'; <br>
+The sequence \\  inserts a backslash in a string: <br>
+
+Example <br>
+var x = "The character \\ is called backslash."; <br>
+Six other escape sequences are valid in JavaScript: <br>
+
+Code	Result <br>
+\b	Backspace <br>
+\f	Form Feed <br>
+\n	New Line <br>
+\r	Carriage Return <br>
+\t	Horizontal Tabulator <br>
+\v	Vertical Tabulator <br>
+The 6 escape characters above were originally designed to control typewriters, teletypes, and fax machines. They do not make any sense in HTML. <br>
+
+Breaking Long Code Lines <br>
+For best readability, programmers often like to avoid code lines longer than 80 characters. <br>
+
+
+<h2>
+    If a JavaScript statement does not fit on one line, the best place to break it is after an operator:</h2><br>
+
+Example <br>
+document.getElementById("demo").innerHTML = <br>
+"Hello Dolly!"; <br>
+You can also break up a code line within a text string with a single backslash: <br>
+
+Example <br>
+document.getElementById("demo").innerHTML = "Hello \ <br>
+Dolly!"; <br>
+The \ method is not the preferred method. It might not have universal support. <br>
+Some browsers do not allow spaces behind the \ character. <br>
+ 
+<h2>
+    A safer way to break up a string, is to use string addition:</h2>
+
+Example <br>
+document.getElementById("demo").innerHTML = "Hello " +
+"Dolly!"; v
+You cannot break up a code line with a backslash: <br>
+
+Example <br>
+document.getElementById("demo").innerHTML = \ <br>
+"Hello Dolly!"; <br>
+Strings Can be Objects <br>
+Normally, JavaScript strings are primitive values, created from literals: <br>
+
+var firstName = "John"; <br>
+
+<h2>But strings can also be defined as objects with the keyword new:</h2> <br>
+
+var firstName = new String("John"); <br>
+
+Example <br>
+var x = "John"; <br>
+var y = new String("John"); <br>
+
+// typeof x will return string <br>
+// typeof y will return object <br>
+Don't create strings as objects. It slows down execution speed. <br>
+The new keyword complicates the code. This can produce some unexpected results: <br>
+
+<h2>When using the == operator, equal strings are equal:</h2> <br>
+
+Example <br>
+var x = "John";          <br>   
+var y = new String("John"); <br>
+
+// (x == y) is true because x and y have equal values<br>
+When using the === operator, equal strings are not equal, because the === operator expects equality in both type and value. <br>
+
+Example <br>
+var x = "John";        <br>     
+var y = new String("John"); <br>
+
+// (x === y) is false because x and y have different types (string and object)<br>
+Or even worse. Objects cannot be compared: <br>
+
+Example <br>
+var x = new String("John");       <br>       
+var y = new String("John"); <br>
+
+// (x == y) is false because x and y are different objects <br>
+Example <br>
+var x = new String("John");         <br>    
+var y = new String("John");<br>
+
+// (x === y) is false because x and y are different objects
+    </div>
+
+
+
+</body>
+</html>
